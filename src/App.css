@@ -13,6 +13,7 @@
   box-sizing: border-box;
   font-family: "raleway";
   font-size: 18px;
+  color: var(--primary-color);
 }
 
 .header {
@@ -41,9 +42,36 @@
 }
 
 .header button {
-  color: var(--primary-color);
   background-color: var(--button-background-color);
   border: none;
   padding: 15px;
   cursor: pointer;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--body-background-color);
+  height: 100vh;
+}
+
+.weather-now-section {
+  font-weight: bold;
+}
+
+.weather-now-section .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-now-section .details .temperature {
+  font-size: 25px;
+  margin: 17px 0;
+}
+
+span {
+  display: block;
 }
