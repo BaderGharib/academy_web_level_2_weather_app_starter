@@ -1,7 +1,11 @@
 export default function Search() {
   return (
-    <div className="">
-      <input type="text" className="search-bar" />
+    <div className="header">
+      <input
+        type="text"
+        placeholder="Type in a city name"
+        className="search-bar"
+      />
       <button>See Weather</button>
     </div>
   );
