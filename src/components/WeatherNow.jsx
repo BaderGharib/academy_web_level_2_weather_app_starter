@@ -1,9 +1,7 @@
-import React, { useEffect, useReducer, useState, useRef } from "react";
-import Search from "./Search";
+import { useEffect, useState, useRef } from "react";
 import clearIcon from "../../public/images/weather-icons/clear.svg";
 import cloudyIcon from "../../public/images/weather-icons/cloudy.svg";
 import drizzleIcon from "../../public/images/weather-icons/drizzle.svg";
-import fogIcon from "../../public/images/weather-icons/fog.svg";
 import mostlyCloudyIcon from "../../public/images/weather-icons/mostlycloudy.svg";
 import partlyCloudyIcon from "../../public/images/weather-icons/partlycloudy.svg";
 import rainIcon from "../../public/images/weather-icons/rain.svg";
@@ -14,29 +12,6 @@ import unknownIcon from "../../public/images/weather-icons/unknown.svg";
 export default function WeatherNow() {
   const inputRef = useRef();
   const [weatherData, setWeatherData] = useState(false);
-  const allIcons = {
-    "01d": clearIcon,
-    "01n": clearIcon,
-
-    "02d": cloudyIcon,
-    "02n": cloudyIcon,
-
-    "03d": cloudyIcon,
-    "03n": cloudyIcon,
-
-    "04d": drizzleIcon,
-    "04n": drizzleIcon,
-
-    "09d": rainIcon,
-    "09n": rainIcon,
-
-    "10d": rainIcon,
-    "10n": rainIcon,
-
-    "13d": snowIcon,
-    "13n": snowIcon,
-  };
-
   const weatherImage = {
     "clear sky": clearIcon,
     "few clouds": partlyCloudyIcon,
@@ -79,7 +54,7 @@ export default function WeatherNow() {
 
   useEffect(() => {
     search();
-  }, []);
+  });
 
   return (
     <>
